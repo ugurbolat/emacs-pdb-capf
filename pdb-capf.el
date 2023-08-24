@@ -94,7 +94,8 @@
       (when (>= end start)
         (list start
               end
-              (completion-table-with-cache #'pdb-capf--completions)
+              ;;(completion-table-with-cache #'pdb-capf--completions)
+	      (completion-table-dynamic #'pdb-capf--completions)
               :exclusive 'no)))))
 
 (provide 'pdb-capf)
